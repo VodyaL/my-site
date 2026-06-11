@@ -1,0 +1,213 @@
+
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#0b0b0b;
+--card:#141414;
+--accent:#ff7a00;
+--accent2:#ff9f43;
+--text:#f5f5f5;
+}
+body{
+font-family:Segoe UI,Arial,sans-serif;
+background:linear-gradient(180deg,#080808,#121212);
+color:var(--text);
+line-height:1;
+}
+header{
+position:sticky;
+top:0;
+z-index:100;
+background:rgba(0, 0, 0, 0.95);
+backdrop-filter:blur(10px);
+border-bottom:1px solid rgba(255,122,0,.25);
+}
+header>div,footer>div,main,section>div{
+max-width:1200px;
+margin:auto;
+padding:20px;
+}
+header>div{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+nav ul{
+display:flex;
+gap:18px;
+list-style:none;
+}
+nav a{
+color:white;
+text-decoration:none;
+padding:10px 16px;
+border-radius:12px;
+transition:.3s;
+}
+nav a:hover{
+background:var(--accent);
+}
+section:first-child{
+padding:80px 20px;
+text-align:center;
+}
+h1{
+font-size:3rem;
+margin-bottom:15px;
+background:linear-gradient(90deg,var(--accent),#fff);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+h2{
+    color:var(--accent);
+    text-align: center;
+    margin:30px 0 20px}
+
+section div div{
+border-radius:18px;
+text-align: center;
+}
+
+img{
+max-width:100%;
+height:auto;
+border-radius:16px;
+}
+main div div{
+background:var(--card);
+padding:10px;
+
+border:1px solid rgba(255,122,0,.15);
+transition:.3s;
+}
+main div div:hover{
+transform:translateY(-6px);
+box-shadow:0 10px 25px rgba(255,122,0,.2);
+}
+input,textarea{
+width:100%;
+padding:14px;
+border-radius:12px;
+border:1px solid #333;
+background:#1b1b1b;
+color:white;
+}
+button{
+background:var(--accent);
+color:white;
+border:none;
+padding:14px 20px;
+border-radius:12px;
+cursor:pointer;
+font-weight:700;
+}
+footer{
+margin-top:60px;
+background:#090909;
+border-top:1px solid rgba(255,122,0,.25);
+margin: 0 auto;
+    text-align: center; 
+}
+footer p,footer h4{margin:8px 0}
+
+
+
+
+
+
+
+
+@media(max-width:900px){
+.products-container,
+.products-grid,
+.catalog-container,
+.catalog-grid,
+.products{
+grid-template-columns:repeat(2,1fr) !important;
+}
+}
+
+@media(max-width:600px){
+.products-container,
+.products-grid,
+.catalog-container,
+.catalog-grid,
+.products{
+grid-template-columns:1fr !important;
+}
+}
+
+
+
+
+body::before{
+content:"";
+position:fixed;inset:0;
+background:radial-gradient(circle at top right,rgba(255,122,0,.15),transparent 40%);
+pointer-events:none;
+}
+.hero-stats{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;margin-top:30px}
+.hero-stats div{background:#171717;padding:15px 25px;border-radius:15px}
+.review-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.review{background:#181818;padding:20px;border-left:4px solid var(--accent)}
+.top-btn{position:fixed;right:20px;bottom:20px;background:var(--accent);padding:12px 16px;border-radius:50%}
+
+
+
+section:last-of-type > div > div{
+display:grid !important;
+grid-template-columns:repeat(1,minmax(260px,1fr));
+gap:24px;
+}
+
+
+header{
+box-shadow:0 10px 30px rgba(0,0,0,.35);
+}
+
+main{
+max-width:1400px;
+margin:0 auto;
+}
+
+.review,.hero-stats div,main div div{
+backdrop-filter:blur(8px);
+}
+
+@media(max-width:900px){
+section:last-of-type > div > div{
+grid-template-columns:repeat(2,1fr);
+}
+}
+
+@media(max-width:600px){
+section:last-of-type > div > div{
+grid-template-columns:1fr;
+}
+}
+
+
+
+/* Почему выбирают нас */
+main section:nth-of-type(2) > div > div{display:grid!important;grid-template-columns:repeat(3,1fr)!important;gap:20px!important;}
+/* Популярные товары */
+main section:nth-of-type(3) > div > div{display:grid!important;grid-template-columns:repeat(3,1fr)!important;gap:20px!important;}
+/* Каталог */
+body:has(title) section:nth-of-type(2) > div > div{display:grid;}
+.contacts-info a, a[href^="tel:"], a[href*="vk.com"], a[href*="max.ru"], a[href^="mailto:"], a[href="gymhub@gmail.com"]{color:#ff7a00!important;font-weight:600;}
+@media(max-width:900px){main section:nth-of-type(2)>div>div,main section:nth-of-type(3)>div>div{grid-template-columns:repeat(2,1fr)!important;}}
+@media(max-width:600px){main section:nth-of-type(2)>div>div,main section:nth-of-type(3)>div>div{grid-template-columns:1fr!important;}}
+
+
+.why-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    border-radius: 18px;
+}
+
+.why-grid > div{
+    width: 100%;
+    text-align: center;
+    border-radius: 18px;
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обратная связь</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+    .feedback-page{max-width:900px;margin:50px auto;padding:20px}
+    .feedback-card{background:#111;border:1px solid #ff7a00;border-radius:20px;padding:30px;box-shadow:0 0 25px rgba(255,122,0,.25)}
+    .feedback-card h1{text-align:center;color:#ff7a00}
+    .feedback-form{display:grid;gap:15px}
+    .feedback-form input,.feedback-form textarea{padding:14px;border-radius:12px;border:1px solid #333;background:#1a1a1a;color:#fff}
+    .feedback-form button{padding:15px;border:none;border-radius:12px;background:#ff7a00;color:#fff;font-weight:bold;cursor:pointer}
+    .feedback-form button:hover{transform:translateY(-2px)}
+    </style>
+
+</head>
+<body>
+    <header><div><a href="index.html">
+        <img src="image/logotypeee.jpg" width="100px">
+        <nav><ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="catalog.html">Каталог</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
+            <li><a href="feedback.html">Обратная связь</a></li>
+        </ul></nav></div></header>
+
+        <main class="feedback-page">
+            <div class="feedback-card">
+                <h1>Свяжитесь с нами</h1>
+
+                <form class="feedback-form">
+                    <input type="text" placeholder="Ваше имя" required>
+                    <input type="email" placeholder="Email" required>
+                    <input type="tel" placeholder="Телефон">
+                    <textarea rows="6" placeholder="Ваше сообщение"></textarea>
+                    <button type="submit">Отправить сообщение</button>
+                </form>
+            </div>
+        </main>
+
+        <footer>
+        <div>
+            <div>
+                <h4>Контакты</h4>
+                <p>Почта: gymhub@gmail.com</p>
+                <p>Телефон: +7 (952) 777-77-77</p>
+                <p>Адрес: ул. Коммунистический проспект 40, Северск</p>
+            </div>
+            <div>
+                <h4>Следите за нами</h4>
+                <p>Соцсети: VK, Max.</p>
+            </div>
+        </div>
+        <div>
+            <p>&copy; 2026 Все права защищены. Учебный проект.</p>
+        </div>
+    </footer>
+</body>
+</html>
