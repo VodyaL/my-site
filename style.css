@@ -1,5 +1,6 @@
 
 *{margin:0;padding:0;box-sizing:border-box}
+
 :root{
     --bg:#0b0b0b;
     --card:#141414;
@@ -7,12 +8,14 @@
     --accent2:#ff9f43;
     --text:#f5f5f5;
 }
+
 body{
     font-family:Segoe UI,Arial,sans-serif;
     background:linear-gradient(180deg,#080808,#121212);
     color:var(--text);
     line-height:1;
 }
+
 header{
     position:sticky;
     top:0;
@@ -21,21 +24,25 @@ header{
     backdrop-filter:blur(10px);
     border-bottom:1px solid rgba(255,122,0,.25);
 }
+
 header>div,footer>div,main,section>div{
     max-width:1200px;
     margin:auto;
     padding:20px;
 }
+
 header>div{
     display:flex;
     justify-content:space-between;
     align-items:center;
 }
+
 nav ul{
     display:flex;
     gap:18px;
     list-style:none;
 }
+
 nav a{
     color:white;
     text-decoration:none;
@@ -43,6 +50,7 @@ nav a{
     border-radius:12px;
     transition:.3s;
 }
+
 nav a:hover{
     background:var(--accent);
 }
@@ -51,6 +59,7 @@ section:first-child{
     padding:80px 20px;
     text-align:center;
 }
+
 h1{
     font-size:3rem;
     margin-bottom:15px;
@@ -74,16 +83,19 @@ img{
     height:auto;
     border-radius:16px;
 }
+
 main div div{
     background:var(--card);
     padding:10px;
     border:1px solid rgba(255,122,0,.15);
     transition:.3s;
 }
+
 main div div:hover{
     transform:translateY(-6px);
     box-shadow:0 10px 25px rgba(255,122,0,.2);
 }
+
 input,textarea{
     width:100%;
     padding:14px;
@@ -92,6 +104,7 @@ input,textarea{
     background:#1b1b1b;
     color:white;
 }
+
 button{
     background:var(--accent);
     color:white;
@@ -101,6 +114,7 @@ button{
     cursor:pointer;
     font-weight:700;
 }
+
 footer{
     margin-top:60px;
     background:#090909;
@@ -134,8 +148,6 @@ footer p,footer h4{margin:8px 0}
         grid-template-columns:1fr !important;
     }
 }
-
-
 
 
 body::before{
@@ -179,9 +191,9 @@ body::before{
 
 
 section:last-of-type > div > div{
-display:grid !important;
-grid-template-columns:repeat(1,minmax(260px,1fr));
-gap:24px;
+    display:grid !important;
+    grid-template-columns:repeat(1,minmax(260px,1fr));
+    gap:24px;
 }
 
 
@@ -217,16 +229,19 @@ main section:nth-of-type(2) > div > div{
     display:grid!important;grid-template-columns:repeat(3,1fr)!important;
     gap:20px!important;
 }
+
 /* Популярные товары */
 main section:nth-of-type(3) > div > div{
     display:grid!important;
     grid-template-columns:repeat(3,1fr)!important;
     gap:20px!important;
 }
+
 /* Каталог */
 body:has(title) section:nth-of-type(2) > div > div{
     display:grid;
 }
+
 .contacts-info a, a[href^="tel:"], a[href*="vk.com"], a[href*="max.ru"], a[href^="mailto:"], a[href="gymhub@gmail.com"]{color:#ff7a00!important;font-weight:600;}
 @media(max-width:900px){main section:nth-of-type(2)>div>div,main section:nth-of-type(3)>div>div{grid-template-columns:repeat(2,1fr)!important;}}
 @media(max-width:600px){main section:nth-of-type(2)>div>div,main section:nth-of-type(3)>div>div{grid-template-columns:1fr!important;}}
