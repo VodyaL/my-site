@@ -645,9 +645,18 @@ main section:nth-of-type(3) > div > div > div:last-child{
 }
 
 @media (max-width:768px){
-    .burger-btn{display:flex;}
-    nav{display:none;width:100%;}
-    nav.active{display:block;}
+    .burger-btn{   
+        display:flex;
+    }
+
+    nav{
+        display:block;
+        width:100%;
+    }
+
+    nav.active{
+        display:block;
+    }
 }
 
 
