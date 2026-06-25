@@ -272,7 +272,7 @@ main section:nth-of-type(3) > div > div {
 section:last-of-type > div > div {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 24px;
+    gap: 5px;
 }
 
 /* КОНТАКТЫ */
@@ -563,4 +563,101 @@ footer > div{
         padding:10px 18px;
         font-size:14px;
     }
+}
+
+
+.burger-btn{
+display:none;
+background:none;
+border:none;
+cursor:pointer;
+flex-direction:column;
+gap:5px;
+}
+.burger-btn span{
+width:30px;
+height:3px;
+background:#fff;
+display:block;
+}
+
+@media (max-width:768px){
+.burger-btn{display:flex;}
+nav{display:none;width:100%;}
+nav.active{display:block;}
+}
+
+
+/* Animated burger */
+.burger-btn{
+position:relative;
+z-index:1001;
+transition:.3s;
+}
+.burger-btn span{
+transition:all .35s ease;
+transform-origin:center;
+}
+.burger-btn.active span:nth-child(1){
+transform:translateY(8px) rotate(45deg);
+}
+.burger-btn.active span:nth-child(2){
+opacity:0;
+}
+.burger-btn.active span:nth-child(3){
+transform:translateY(-8px) rotate(-45deg);
+}
+
+@media (max-width:768px){
+nav{
+display:block;
+max-height:0;
+overflow:hidden;
+opacity:0;
+transform:translateY(-15px);
+transition:max-height .45s ease, opacity .35s ease, transform .35s ease;
+}
+nav.active{
+max-height:400px;
+opacity:1;
+transform:translateY(0);
+}
+nav ul li{
+opacity:0;
+transform:translateY(-10px);
+transition:.3s;
+}
+nav.active ul li{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+
+/* Центровка карточек на главной */
+@media (max-width: 1024px){
+.why-grid,
+main section:nth-of-type(3) > div > div{
+display:flex !important;
+flex-wrap:wrap;
+justify-content:center;
+gap:20px;
+}
+.why-grid > div,
+main section:nth-of-type(3) > div > div > div{
+flex:0 1 calc(50% - 20px);
+max-width:420px;
+}
+.why-grid > div:last-child,
+main section:nth-of-type(3) > div > div > div:last-child{
+margin-left:auto;
+margin-right:auto;
+}
+}
+@media (max-width: 600px){
+.why-grid > div,
+main section:nth-of-type(3) > div > div > div{
+flex:0 1 100%;
+max-width:420px;
+}
 }

@@ -12,7 +12,10 @@
             <a href="index.html">
                 <img class="logo" src="image/logo.png">
             </a>
-            <nav>
+            <button class="burger-btn" aria-label="menu">
+<span></span><span></span><span></span>
+</button>
+<nav>
                 <ul>
                     <li><a href="index.html">Главная</a></li>
                     <li><a href="catalog.html">Каталог</a></li>
@@ -34,50 +37,50 @@
                     <div class="button">Перейти в каталог товаров</div>
                 </a>
             </div>
-        
-        <div class="hero-stats">
-        <div>
-            <h3>100+</h3>
-            <p>Клиентов</p>
-        </div>
-        
-        <div>
-            <h3>50+</h3>
-            <p>Тренажёров</p>
-        </div>
-        
-        <div>
-            <h3>24/7</h3>
-            <p>Поддержка</p>
-        </div>
-    </div>
-</section>
+                
+            <div class="hero-stats">
+                <div>
+                    <h3>100+</h3>
+                    <p>Клиентов</p>
+                </div>
+                
+                <div>
+                    <h3>50+</h3>
+                    <p>Тренажёров</p>
+                </div>
+                
+                <div>
+                    <h3>24/7</h3>
+                    <p>Поддержка</p>
+                </div>
+            </div>
+        </section>
 
-<section>
-<div>
-<h2>Отзывы клиентов</h2>
-<div class="review-grid">
-    <div class="review">
-        <h3>★★★★★</h3>
-        <p>Качественные товары и отличные цены.</p>
-    </div>
-    
-    <div class="review">
-        <h3>★★★★★</h3>
-        <p>Лучший зал в городе!</p>
-    </div>
+            <div>
+                <h2>Отзывы клиентов</h2>
+                <div class="why-grid">
+                    <div class="review">
+                        <h3>★★★★★</h3>
+                        <p>Качественные товары и отличные цены.</p>
+                    </div>
+                    
+                    <div class="review">
+                        <h3>★★★★★</h3>
+                        <p>Лучший зал в городе!</p>
+                    </div>
 
-    <div class="review">
-        <h3>★★★★★</h3>
-        <p>Современное оборудование.</p>
-    </div>
-</section>
+                    <div class="review">
+                        <h3>★★★★★</h3>
+                        <p>Современное оборудование.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
             <div>
                 <h2>Наши преимущества</h2>
-                
-                    <div class="why-grid">
-                        <div>
+                <div class="why-grid">
+                    <div>
                         <img class="premium" src="image/treneri.jpg" alt="">
                         <h3>Профессиональные тренеры</h3>
                         <p>Индивидуальный подход и помощь в достижении ваших целей</p>
@@ -94,16 +97,12 @@
                         <h3>Современное оборудование</h3>
                         <p>Новые тренажёры для эффективных и безопасных тренировок</p>
                     </div>
-                    
                 </div>
             </div>
-        </section>
 
-        
-        <section>
             <div>
                 <h2>Популярные товары</h2>
-                <div>
+                <div class="why-grid">
                     <div>
                         <h3>Абонемент</h3>
                         <br>
@@ -151,4 +150,16 @@
             </div>
         </div>
     </footer>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+ const btn=document.querySelector('.burger-btn');
+ const nav=document.querySelector('nav');
+ if(btn && nav){
+   btn.addEventListener('click',function(){
+      nav.classList.toggle('active');
+      btn.classList.toggle('active');
+   });
+ }
+});
+</script>
 </html>

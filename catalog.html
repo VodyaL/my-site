@@ -12,7 +12,10 @@
             <a href="index.html">
                 <img class="logo" src="image/logo.png">
             </a>
-            <nav>
+            <button class="burger-btn" aria-label="menu">
+<span></span><span></span><span></span>
+</button>
+<nav>
                 <ul>
                     <li><a href="index.html">Главная</a></li>
                     <li><a href="catalog.html">Каталог</a></li>
@@ -30,9 +33,8 @@
             </div>
         </section>
 
-        <section>
             <div>
-                <div>
+                <div class="why-grid">
                     <div>
                         <h3>Абонемент</h3>
                         <br>
@@ -137,4 +139,16 @@
             </div>
         </div>
     </footer>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+ const btn=document.querySelector('.burger-btn');
+ const nav=document.querySelector('nav');
+ if(btn && nav){
+   btn.addEventListener('click',function(){
+      nav.classList.toggle('active');
+      btn.classList.toggle('active');
+   });
+ }
+});
+</script>
 </html>
