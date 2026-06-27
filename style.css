@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Rude';
-    src: url(fonts/Ruda-Regular.ttf);
+    src: url(fonts/Montserrat-Italic-VariableFont_wght.ttf);
 }
 
 /* СБРОС СТИЛЕЙ */
@@ -103,6 +103,7 @@ footer {
     justify-content: center;
     align-items: center;
     text-align: center;
+    
 }
   
 header>div{
@@ -682,3 +683,37 @@ main section:nth-of-type(3) > div > div > div:last-child{
 .burger-btn.active span:nth-child(3){
     transform:translateY(-8px) rotate(-45deg);
 }
+
+.card{background:var(--card)!important;border:1px solid rgba(216,116,42,.35)!important;border-radius:18px!important;color:#fff!important;box-shadow:0 0 30px rgba(216,116,42,.15)!important;}
+.card .text-muted{color:#bfbfbf!important;}
+.table{color:#fff!important;}
+.table-striped>tbody>tr:nth-of-type(odd)>*{color:#fff;background:rgba(255,255,255,.03)!important;}
+.form-control{background:#bfbfbf;border:1px solid rgba(216,116,42,.35); color:#fff;}
+.form-control:focus{background:#ffffff;color:#ca4949;border-color:var(--accent);box-shadow:0 0 0 .2rem rgba(216,116,42,.25);}
+.form-check-input:checked {
+    background-color: #d8742a;
+    border-color: #ff6f00;
+}
+a {
+    color: #d8742a;
+}
+
+.btn-outline-primary {
+    --bs-btn-color: #d8742a;
+    --bs-btn-border-color: #d8742a;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #d8742a;
+    --bs-btn-hover-border-color: #d8742a;
+    --bs-btn-active-bg: #68340d;
+    --bs-btn-active-border-color: #d8742a;
+}
+
+.table>:not(caption)>*>* {
+        background-color: var(--card);
+        color: var(--text, var(--text, var(--text)));
+}
+
+.text-start {
+  text-align: center !important;
+}
+
