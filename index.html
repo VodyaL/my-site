@@ -13,9 +13,9 @@
                 <img class="logo" src="image/logo.png">
             </a>
             <button class="burger-btn" aria-label="menu">
-<span></span><span></span><span></span>
-</button>
-<nav>
+                <span></span><span></span><span></span>
+            </button>
+            <nav>
                 <ul>
                     <li><a href="index.html">Главная</a></li>
                     <li><a href="catalog.html">Каталог</a></li>
@@ -56,6 +56,23 @@
                 </div>
             </div>
         </section>
+
+        <div class="slider-container">
+            <h2>Наш интерьер</h2>
+            <div class="slider">
+                <button class="slider-btn prev-btn" id="prevBtn">❮</button>
+                <div class="slider-image-wrapper">
+                    <img src="image/zal1.jpg" alt="Изображение 1" id="sliderImage">
+
+
+                </div>
+                <button class="slider-btn next-btn" id="nextBtn">❯</button>
+            </div>
+            <p class="image-counter" id="imageCounter">1 / 5</p>
+        </div>
+    
+        <script src="slider.js"></script>
+    
 
             <div>
                 <h2>Отзывы клиентов</h2>
@@ -150,6 +167,7 @@
             </div>
         </div>
     </footer>
+    <script src="slider.js"></script>
 <script>
     document.addEventListener('DOMContentLoaded',function(){
         const btn=document.querySelector('.burger-btn');
